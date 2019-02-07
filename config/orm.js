@@ -29,9 +29,9 @@ module.exports = {
             });
         });
     },
-    updateOne: (table, valueObj, condition) => {
+    updateOne: (table, valueObj, conditionObj) => {
         return new Promise((resolve, reject) => {
-            connection.query('UPDATE ?? SET ? WHERE ?', [table, valueObj, condition], function (err, data) {
+            connection.query('UPDATE ?? SET ? WHERE ?', [table, valueObj, conditionObj], function (err, data) {
                 console.log(`\nQuerying: ${this.sql}`);
                 if(err) {
                     console.log('\norm.updateOne was unsuccessful. See error below.\n');
