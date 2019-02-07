@@ -2,7 +2,7 @@ const express = require('express');
 
 const orm = require('./config/orm');
 
-orm.insertOne('pancakes', {pancake_name: "wallnut", devoured: false})
+orm.updateOne('pancakes', {pancake_name: 'strawberry'}, {pancake_name: 'blueberry'})
 .then((data) => {
     console.log(data);
 })
