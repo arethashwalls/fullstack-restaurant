@@ -7,10 +7,10 @@ module.exports = {
                 console.log(`\nQuerying: ${this.sql}`);
                 if (err) {
                     console.log('\norm.selectAll was unsuccessful. See error below.\n');
-                    reject(err);
+                    return reject(err);
                 }
                 console.log('\norm.selectAll was successful. See data below.\n')
-                resolve(data);
+                return resolve(data);
             });
         });
     },
@@ -21,16 +21,16 @@ module.exports = {
             valNames.forEach(val => {
                 if (!val || val === '') {
                     console.log('\n\norm.insertOne was unsuccessful.\n\nNull values are forbidden.');
-                    reject('\nNull values are forbidden.');
+                    return reject('\nNull values are forbidden.');
                 } else {
                     connection.query(`INSERT INTO ?? (??) VALUES (?)`, [table, colNames, valNames], function (err, data) {
                         console.log(`\nQuerying: ${this.sql}`);
                         if (err) {
                             console.log('\norm.insertOne was unsuccessful. See error below.\n');
-                            reject(err);
+                            return reject(err);
                         }
                         console.log('\norm.insertOne was successful. See data below.\n')
-                        resolve(data);
+                        return resolve(data);
                     });
                 }
             })
@@ -43,10 +43,10 @@ module.exports = {
                 console.log(`\nQuerying: ${this.sql}`);
                 if (err) {
                     console.log('\norm.updateOne was unsuccessful. See error below.\n');
-                    reject(err);
+                    return reject(err);
                 }
                 console.log('\norm.updateOne was successful. See data below.\n');
-                resolve(data);
+                return resolve(data);
             });
         });
     }
