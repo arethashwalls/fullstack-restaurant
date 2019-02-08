@@ -1,38 +1,41 @@
+<h1>The Full Stack</h1>
+<h2>A Palace of Pancakes</h2>
+
 <div class="container">
-    <h1>The Full Stack</h1>
-    <h2>A Palace of Pancakes</h2>
-
-    <p>Select one of our delicious pancake stacks below to dig in. We'll keep track of which ones you've already tried!</p>
-
     <section id="uneaten">
         <h3>On the griddel:</h3>
+        <p>Select one of our delicious pancake stacks below to dig in. We'll keep track of which ones you've already
+            tried!</p>
+        <hr />
         <ul>
             {{#each pancakes}}
-                {{#unless devoured}}
-                <li>
-                    <p>{{this.pancake_name}}</p>
-                    <button class="chow-button" data-pancakeId="{{this.id}}">Chow Down!</button>
-                </li>
-                {{/unless}}
+            {{#unless devoured}}
+            <li>
+                <p>{{this.pancake_name}}</p>
+                <button class="chow-button" data-pancakeId="{{this.id}}">Chow Down!</button>
+            </li>
+            {{/unless}}
             {{/each}}
         </ul>
     </section>
 
     <section id="eaten">
         <h3>In your stomach:</h3>
+        <hr />
         <ul>
             {{#each pancakes}}
-                {{#if devoured}}
-                    <li>
-                        <p>{{this.pancake_name}}</p>
-                    </li>
-                {{/if}}
+            {{#if devoured}}
+            <li>
+                <p>{{this.pancake_name}}</p>
+            </li>
+            {{/if}}
             {{/each}}
         </ul>
     </section>
 
     <section id="new">
         <h3>Suggest a new flavor:</h3>
+        <hr />
         <form>
             <input type="text" />
             {{!-- Obey, consume... --}}

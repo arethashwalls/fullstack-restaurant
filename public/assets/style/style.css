@@ -1,0 +1,88 @@
+/* Global Styles */
+@font-face {
+    /* License: https://www.fontsquirrel.com/license/HamburgerHeaven */
+    font-family: 'HamburgerHeaven';
+    src: url('hambh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-size: 18px;
+    background-color: #BBDEF0;
+    color: #006666;
+    font-family: 'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif; 
+}
+
+/* Header Styles */
+h1, h2, h3 {
+    font-family: 'HamburgerHeaven';
+}
+h1, h2 {
+    text-align: center;
+}
+h2, h3 {
+    color: #894650;
+}
+h1 {
+    font-size: 5rem;
+    margin-top: 30px;
+}
+h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Main Content Styles */
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+section {
+    width: 45%;
+    float: left;
+    padding: 7px 10px;
+    margin: 20px 20px 0 0;
+    border: 3px solid #894650;
+    border-radius: 5px;
+    background-color: #F7A9A8;
+}
+hr {
+    box-shadow: none;
+    border: 1px solid #894650;
+}
+p {
+    line-height: 1.4rem;
+}
+#uneaten ul p {
+    display: inline-block;
+}
+
+/* Button Styles */
+button {
+    background-color: #BBDEF0;
+    border: 3px solid #006666;
+    border-radius: 5px;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+#uneaten ul :not(:last-child) button {
+    margin-bottom: 10px;
+}
+
+/* Text Input Styles */
+input[type="text"] {
+    background-color: #BBDEF0;
+    border: 3px solid #006666;
+    border-radius: 5px;
+    height: 1.4rem;
+    padding: 0 5px;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
