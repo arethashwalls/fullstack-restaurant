@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     pancake.selectAll()
     .then(data => {
         console.log(data);
-        res.json(data);
+        res.render('index', {pancakes: data})
     })
     .catch(err => {
         console.log('\nGET request was unsuccessful.\n');
