@@ -20,6 +20,10 @@
 * [`db`](/db) contains a SQL schema and seeds.
 * `models`
   * [`pancake.js`](/models/pancake.js) maps the custom ORM methods to a pancake object.
+* `public/assets` contains static code.
+ * `styles` contains stylesheets and a webfont.
+ * [`script.js`](/public/assets/script.js) contains front-end AJAX calls.
+* [`views`](/views) contains all Handlebars templates.
 * A `gitignore` file
 * NPM's `package-lock.json` and `package.json` files.
 * This `readme`.
