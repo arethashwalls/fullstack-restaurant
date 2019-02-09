@@ -3,7 +3,7 @@
 
 **The Full Stack** is a mock-restaurant application that allows users to 'eat' pancakes and add new pancake flavors to the menu, created as an exercise in MVC architecture.
 
-*Not So Different* uses:
+*The Full Stack* uses:
 
 * The [Node.js](https://nodejs.org/en/) runtime environment.
 * The [Express](https://expressjs.com/) framework.
