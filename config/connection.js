@@ -1,11 +1,15 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USERNAME || 'root',
-    password: process.env.DB_PASSWORD || 'Fallen Falling',
-    database: process.env.DB_NAME || 'fullstack_db'
-})
+const connection = 
+    process.env.CLEARDB_DATABASE_URL ?
+        mysql.createConnection(process.env.CLEARDB_DATABASE_URL)
+    :
+        mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'Fallen Falling',
+            database: 'fullstack_db'
+        });
 
 connection.connect((err) => {
     if (err) return console.log(err.stack);
